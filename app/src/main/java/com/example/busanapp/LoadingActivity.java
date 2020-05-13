@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.busanapp.calendar.CalendarFragment;
 import com.example.busanapp.ui.home.FindFoodFragment;
 import com.example.busanapp.ui.home.FoodFragment;
 import com.example.busanapp.home.HomeFragment;
@@ -74,6 +75,10 @@ public class LoadingActivity extends AppCompatActivity implements NavigationView
             case R.id.nav_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new HomeFragment()).commit();
+                break;
+            case R.id.nav_calendar:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new CalendarFragment()).commit();
                 break;
 
             case R.id.nav_hospital:
